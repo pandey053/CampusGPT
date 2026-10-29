@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #f7f8f4;
+  --foreground: #25382d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Aptos", "Segoe UI", sans-serif;
+  --font-mono: "Cascadia Code", "Consolas", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+button,
+a,
+summary,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon-button {
+  display: inline-flex;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  color: #647168;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.icon-button:hover {
+  background: #edf0eb;
+  color: #304338;
+}
+
+.icon-button:focus-visible,
+.chat-menu summary:focus-visible {
+  outline: 2px solid #477963;
+  outline-offset: 2px;
+}
+
+.feedback-button {
+  display: inline-flex;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  color: #647168;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.feedback-button:hover,
+.feedback-selected {
+  background: #e9f0e8;
+  color: #285c49;
+}
+
+.feedback-button:focus-visible {
+  outline: 2px solid #477963;
+  outline-offset: 2px;
+}
+
+.feedback-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.chat-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.chat-menu:not([open]) .chat-menu-popover {
+  display: none;
+}
+
+.markdown-message h1,
+.markdown-message h2 {
+  font-size: 1.15rem;
+}
+
+.markdown-message h3,
+.markdown-message h4 {
+  font-size: 1rem;
+}
+
+.markdown-message code:not(pre code) {
+  color: #304338;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #111813;
+  --foreground: #e6ece7;
+}
+
+.dark body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.dark [class*="bg-white"],
+.dark [class*="bg-[#fcfdfb]"],
+.dark [class*="bg-[#fff"],
+.dark [class*="bg-[#f7f8f4]"] {
+  background-color: #19231d !important;
+}
+
+.dark [class*="bg-[#eef4ed]"],
+.dark [class*="bg-[#e9f0e8]"] {
+  background-color: #26382d !important;
+}
+
+.dark [class*="bg-[#f7f9f5]"],
+.dark [class*="bg-[#edf0eb]"],
+.dark [class*="bg-[#e5eae2]"] {
+  background-color: #202b24 !important;
+}
+
+.dark [class*="border-[#"] {
+  border-color: #34443a !important;
+}
+
+.dark [class*="divide-[#"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #34443a !important;
+}
+
+.dark [class*="text-[#"] {
+  color: #d3ddd5 !important;
+}
+
+.dark [class*="text-[#477963]"],
+.dark [class*="text-[#3d684f]"],
+.dark [class*="text-[#6c8c72]"],
+.dark [class*="text-[#285c49]"] {
+  color: #a8c9ad !important;
+}
+
+.dark [class*="text-[#934d42]"] {
+  color: #f0aaa0 !important;
+}
+
+.dark [class*="hover:bg-[#f7"]:hover,
+.dark [class*="hover:bg-[#eef"]:hover,
+.dark [class*="hover:bg-[#edf"]:hover {
+  background-color: #27352c !important;
+}
+
+.dark .icon-button:hover {
+  background: #2a382f;
+  color: #eef4ef;
+}
+
+.dark .feedback-button:hover,
+.dark .feedback-selected {
+  background: #26382d;
+  color: #a8c9ad;
+}
+
+.dark .chat-menu-popover {
+  background: #19231d;
+}
+
+.dark .markdown-message code:not(pre code) {
+  background: #27342b;
+  color: #e1e9e2;
+}
+
+.dark .chat-composer {
+  background: #141d17;
+}
+
+.dark .chat-header,
+.dark .citation-section {
+  border-color: #34443a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
